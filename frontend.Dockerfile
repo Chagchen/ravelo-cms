@@ -6,7 +6,6 @@ LABEL maintainer="Jesus Rodriguez<arturo@ravelo.ca>"
 WORKDIR /code
 
 ADD ./frontend /code
-ADD ./public /code
 ADD ./package.json /code
 
 RUN npm install
