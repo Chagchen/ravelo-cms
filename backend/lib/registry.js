@@ -57,6 +57,7 @@ Registry.subscribeControllers = async (server) => {
     // get controller's absolute path
     const dirPath = Path.resolve(__dirname, '..', controllerPath);
     const filePaths = await Helpers.listModules(dirPath);
+    console.log('filePaths', filePaths);
 
     filePaths.forEach((modulePath) => {
       // load controller
