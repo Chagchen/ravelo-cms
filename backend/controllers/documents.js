@@ -4,7 +4,7 @@ let controllers = {};
 
 controllers.index = {
   method: 'GET',
-  path: '/documents',
+  path: '/documents/{documentId}',
   config: {
     description: 'Retrieves details of a single document',
     tags: ['api'],
