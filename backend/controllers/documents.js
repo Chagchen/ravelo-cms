@@ -24,10 +24,30 @@ controller.create = {
     tags: ['api'],
     validate: {
       payload: {
-        name: Joi.string().required(),
         content: Joi.string().required(),
         type: Joi.string().required(),
         location: Joi.string().required()
+      }
+    },
+    handler: (request, h) => {
+      return {};
+    }
+  }
+}
+
+controller.update = {
+  method: 'PUT',
+  path: '/documents/{location}',
+  config: {
+    description: 'Update details of a single document',
+    tags: ['api'],
+    validate: {
+      params: {
+        location: Joi.string().required()
+      },
+      payload: {
+        content: Joi.string().required(),
+        type: Joi.string().required()
       }
     },
     handler: (request, h) => {
